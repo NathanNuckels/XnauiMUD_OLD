@@ -26,18 +26,11 @@ public class Install {
 	public static void main(String[] args){
 		Scanner s = new Scanner(System.in);
 		System.out.println("This is the Xnaui MUD Installer");
-		System.out.println("You also need the other JAR file.");
-		System.out.println("Enter the filepath to the \"Xnaui-data.jar\" file");
-		String filename = s.nextLine();
-		System.out.println("Checking if the file exists...");
+		String filename = "XnauiMUD-Setup.jar";
 		File dataFile = new File(filename);
-		if (dataFile.exists() && dataFile.isFile()){
-			;
-		} else if (dataFile.exists() && !dataFile.isFile()){
-			System.out.println("Error: Thats not a file!");
-			System.exit(1);
-		} else {
-			System.out.println("Error:File does not exist!");
+		if (!dataFile.exists()){
+			System.out.println("You Must have renamed this file.");
+			System.out.println("Rename this file to 'XnauiMUD-Setup.jar' to continue");
 			System.exit(1);
 		}
 		System.out.println("Enter path to install to:");
@@ -68,12 +61,19 @@ public class Install {
 					System.out.println("Writing file "+f.getPath());
 					while (is.available() > 0){////
 						fos.write(is.read());////
-						System.out.println(String.valueOf(is.available())+" bytes left."); //PLEASE COMMENT THIS OUT!!!!!!!!!!
+						//System.out.println(String.valueOf(is.available())+" bytes left."); //PLEASE COMMENT THIS OUT!!!!!!!!!!
 					}
 					fos.close();////
 					is.close();////
 				}
 				jar.close();////
+				System.out.println("Cleaning up...");
+				File tool1 = new File(installPath+File.separator+"Install.class");
+				File tool2 = new File(installPath+File.separator+"META-INF"+File.separator+"MANIFEST.MF");
+				File tool3 = new File(installPath+File.separator+"META-INF");
+				tool1.delete();
+				tool2.delete();
+				tool3.delete();
 			}
 			catch (IOException e){
 				e.printStackTrace();

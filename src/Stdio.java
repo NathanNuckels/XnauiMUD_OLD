@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 
 public class Stdio{
 	private File log;
@@ -10,18 +11,39 @@ public class Stdio{
 	public Stdio(String logpath, boolean debugBool){
 		debug=debugBool;
 		log = new File(logpath);
-		logWriter = new FileWriter(logpath);
+		try{
+			logWriter = new FileWriter(logpath);
+			log.createNewFile();
+		} catch (IOException e) {
+			System.out.println("ERROR CREATING LOG FILE");
+			ExceptionHandler.handleAndCrash(e);
+		}
 	}
 	public void print(String line){
 		System.out.println(line);
-		logWriter.write(line);
+		try{
+			logWriter.write(line);
+		} catch (IOException e){
+			System.out.println("ERROR WRITING TO LOG FILE");
+			ExceptionHandler.handleAndCrash(e);
+		}
 	}
 	public void println(String line){
 		System.out.println(line);
-		logWriter.write(line+"\n");
+		try{
+			logWriter.write(line+"\n");
+		} catch (IOException e){
+			System.out.println("ERROR WRITING TO LOG FILE");
+			ExceptionHandler.handleAndCrash(e);
+		}
 	}
 	public void debug(String line){
-		logWriter.write("DEBUG: "+line+"\n");
+		try{
+			logWriter.write("DEBUG: "+line+"\n");
+		} catch (IOException e){
+			System.out.println("ERROR WRITING TO LOG FILE");
+			ExceptionHandler.handleAndCrash(e);
+		}
 		if (debug){
 			System.out.println("DEBUG: "+line);
 		}

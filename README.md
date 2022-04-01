@@ -25,7 +25,12 @@ List of classes (And what they inheret from):
     - [ ] NPC
     - [ ] Enimies
 - [ ] Room
-    - [ ] TutorialRoom (Many functions disabled)
+    - [ ] tutorial
+        - [ ] Tutorial1 (Explain controlls)
+        - [ ] Tutorial2 (Pick up items and inventory)
+        - [ ] Tutorial3 (Turn Bassed combat)
+        - [ ] Tutorial4 (Building)
+        - [ ] Tutorial5 (Map)
     - [ ] worldCeter (Package)
         - [ ] worldCenter.WorldCenter (The senter of the entire MUD)
         - [ ] worldCenter.Hallway1

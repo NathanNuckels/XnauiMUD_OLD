@@ -14,12 +14,15 @@ A checked box means it is completed.
 
 List of classes (And what they inheret from):
 
-- [ ] Item
+- [x] Item
+    - [ ] Tool
+        - [ ] Sword
+            - [ ] WoodenSword
+    - [ ] WoodItem
+    - [ ] StoneItem
 - [ ] Container (Holds items)
     - [ ] PlayerInventory
     - [ ] Chest
-    - [ ] WoodItem
-    - [ ] StoneItem
 - [ ] Entity
     - [ ] Player
     - [ ] NPC

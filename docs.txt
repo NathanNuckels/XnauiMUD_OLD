@@ -1,0 +1,11 @@
+ITEM
+Mehtods:
+
+getSaveData
+getId
+getName
+getLore
+getAmmount
+getStackSize
+
+

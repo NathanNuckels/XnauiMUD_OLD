@@ -1,9 +1,9 @@
 package item;
 public class Item{
-	final protected String name; //Class name
-	final protected String hName; //The name the player sees eg "Command Block"
-	final protected String desc; //A little lore text
-	final protected int maxStackSize; //Ammount of the item you can fit in one inventory slot
+	protected String name; //Class name
+	protected String hName; //The name the player sees eg "Command Block"
+	protected String desc; //A little lore text
+	protected int maxStackSize; //Ammount of the item you can fit in one inventory slot
 	protected int ammount; //Ammount of the item
 	
 	public Item(){

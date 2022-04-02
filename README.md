@@ -13,16 +13,16 @@ A checked box means it is completed.
 ### Features (Technical)
 
 List of classes (And what they inheret from):
-
-- [x] Item
-    - [ ] Tool
-        - [ ] Sword
-            - [ ] WoodenSword
-    - [ ] WoodItem
-    - [ ] StoneItem
-- [ ] Container (Holds items)
-    - [ ] PlayerInventory
-    - [ ] Chest
+- [x] item
+    - [x] item.Item
+        - [x] item.Tool
+            - [ ] item.Sword
+                - [ ] item.WoodenSword
+        - [ ] item.Wood
+        - [ ] item.Stone
+    - [ ] item.Container (Holds items)
+        - [ ] Chest
+- [ ] PlayerInventory
 - [ ] Entity
     - [ ] Player
     - [ ] NPC
@@ -43,6 +43,8 @@ List of classes (And what they inheret from):
         - [ ] triePeaks (Package)
             - [ ] triePeaks.TownSquare
             - [ ] triePeaks.House1
-    - [ ] Ocean
-    - [ ] River
-    - [ ] DeepRiver
+    - [ ] rooms (A package of generic rooms)
+        - [ ] rooms.Ocean
+        - [ ] rooms.River
+        - [ ] rooms.DeepRiver
+        - [ ] rooms.Shore

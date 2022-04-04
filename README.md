@@ -4,13 +4,8 @@ XnauiMUD (Pernounced /ik.shnau.i/) is my attempt at makeing a basic MUD.
 
 To install, download and run `build/Xnaui-Setup.jar`
 
+
 ### Features
-
-A checked box means it is completed.
-
-- [ ] Tutorial Rooms
-
-### Features (Technical)
 
 List of classes (And what they inheret from):
 - [x] item
@@ -18,6 +13,8 @@ List of classes (And what they inheret from):
         - [x] item.Tool
             - [ ] item.Sword
                 - [ ] item.WoodenSword
+            - [ ] item.Pickaxe
+                - [ ] item.WoodenPickaxe
         - [ ] item.Wood
         - [ ] item.Stone
     - [ ] item.Container (Holds items)

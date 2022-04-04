@@ -25,6 +25,14 @@ public class Main{
 			System.out.println("A file (data/intro_art.txt) is missing.");
 			System.exit(1);
 		}
+		Room mainroom = new room.Room(); //REPLACE ME
+		Character character = new characters.Protogen(); //REPLACE ME
+		InputParcer ip = new InputParcer();
+		Player player = new Player(character, mainroom);
+		Game g = new Game(player, ip);
+		g.run();
+		System.out.println("Bye!!");
+
 	}
 
 	public static void main(String args[]){
